@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D360C1881989D8C500959BEB /* CaptureSessionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D360C1871989D8C500959BEB /* CaptureSessionProcessor.swift */; };
 		D3E6C6DA1989C0A9004B377E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6C6D91989C0A9004B377E /* AppDelegate.swift */; };
 		D3E6C6DC1989C0A9004B377E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6C6DB1989C0A9004B377E /* ViewController.swift */; };
 		D3E6C6DF1989C0A9004B377E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E6C6DD1989C0A9004B377E /* Main.storyboard */; };
 		D3E6C6E11989C0A9004B377E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E6C6E01989C0A9004B377E /* Images.xcassets */; };
 		D3E6C6ED1989C0A9004B377E /* BulbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6C6EC1989C0A9004B377E /* BulbTests.swift */; };
+		D3E6C6FB1989C19F004B377E /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6C6FA1989C19F004B377E /* CameraManager.swift */; };
+		D3E6C6FD1989C36A004B377E /* CaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E6C6FC1989C36A004B377E /* CaptureSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3545FD4198A055200CE6124 /* Bulb-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bulb-Bridging-Header.h"; sourceTree = "<group>"; };
+		D360C1871989D8C500959BEB /* CaptureSessionProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureSessionProcessor.swift; path = Classes/CaptureSessionProcessor.swift; sourceTree = "<group>"; };
 		D3E6C6D41989C0A9004B377E /* Bulb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bulb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E6C6D81989C0A9004B377E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E6C6D91989C0A9004B377E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +39,8 @@
 		D3E6C6E61989C0A9004B377E /* BulbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E6C6EB1989C0A9004B377E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E6C6EC1989C0A9004B377E /* BulbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulbTests.swift; sourceTree = "<group>"; };
+		D3E6C6FA1989C19F004B377E /* CameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraManager.swift; path = Classes/CameraManager.swift; sourceTree = "<group>"; };
+		D3E6C6FC1989C36A004B377E /* CaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureSession.swift; path = Classes/CaptureSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D358966D198A00A8002AB1E0 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				D3545FD4198A055200CE6124 /* Bulb-Bridging-Header.h */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
 		D3E6C6CB1989C0A9004B377E = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +90,9 @@
 		D3E6C6D61989C0A9004B377E /* Bulb */ = {
 			isa = PBXGroup;
 			children = (
+				D3E6C6F71989C0F2004B377E /* Controllers */,
+				D3E6C6F61989C0CA004B377E /* Camera */,
 				D3E6C6D91989C0A9004B377E /* AppDelegate.swift */,
-				D3E6C6DB1989C0A9004B377E /* ViewController.swift */,
 				D3E6C6DD1989C0A9004B377E /* Main.storyboard */,
 				D3E6C6E01989C0A9004B377E /* Images.xcassets */,
 				D3E6C6D71989C0A9004B377E /* Supporting Files */,
@@ -87,6 +103,7 @@
 		D3E6C6D71989C0A9004B377E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D358966D198A00A8002AB1E0 /* Objective-C */,
 				D3E6C6D81989C0A9004B377E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -107,6 +124,24 @@
 				D3E6C6EB1989C0A9004B377E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3E6C6F61989C0CA004B377E /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				D3E6C6FA1989C19F004B377E /* CameraManager.swift */,
+				D360C1871989D8C500959BEB /* CaptureSessionProcessor.swift */,
+				D3E6C6FC1989C36A004B377E /* CaptureSession.swift */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		D3E6C6F71989C0F2004B377E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3E6C6DB1989C0A9004B377E /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +193,7 @@
 				TargetAttributes = {
 					D3E6C6D31989C0A9004B377E = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = YN24FFRTC8;
 					};
 					D3E6C6E51989C0A9004B377E = {
 						CreatedOnToolsVersion = 6.0;
@@ -209,6 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E6C6DC1989C0A9004B377E /* ViewController.swift in Sources */,
+				D360C1881989D8C500959BEB /* CaptureSessionProcessor.swift in Sources */,
+				D3E6C6FB1989C19F004B377E /* CameraManager.swift in Sources */,
+				D3E6C6FD1989C36A004B377E /* CaptureSession.swift in Sources */,
 				D3E6C6DA1989C0A9004B377E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,9 +364,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = Bulb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bulb/Bulb-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -336,9 +382,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = Bulb/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bulb/Bulb-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -395,6 +447,7 @@
 				D3E6C6F21989C0A9004B377E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3E6C6F31989C0A9004B377E /* Build configuration list for PBXNativeTarget "BulbTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +456,7 @@
 				D3E6C6F51989C0A9004B377E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

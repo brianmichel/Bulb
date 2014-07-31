@@ -7,19 +7,49 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    private let cameraManager: CameraManager! = CameraManager()
+    
+    public var array: [Int] = [Int]()
                             
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for object: Int in array {
+            
+        }
+        
+        if  let previewLayer = cameraManager.previewLayer {
+            previewLayer.frame = self.view.bounds
+            
+            self.view.layer.addSublayer(previewLayer)
+            
+            var tap = UITapGestureRecognizer(target: self, action: "didTap:")
+            self.view.addGestureRecognizer(tap)
+        }
+        else {
+            print("Can't get a preview layer")
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func didTap(gesture: UITapGestureRecognizer!) {
+        if gesture.state == UIGestureRecognizerState.Ended {
+            if let position: CaptureDevicePosition = cameraManager.position {
+                switch position {
+                case .Back:
+                    cameraManager.switchCamera(CaptureDevicePosition.Front)
+                case .Front:
+                    cameraManager.switchCamera(CaptureDevicePosition.Back)
+                case .Unspecified:
+                    println("Can't switch from Unspecified")
+                }
+            }
+        }
     }
-
 
 }
 
